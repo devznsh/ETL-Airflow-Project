@@ -1,0 +1,42 @@
+[2024-07-13T10:43:13.366+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-13T10:43:13.403+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deploy_flask_app.build_image scheduled__2023-03-25T00:00:00+00:00 [queued]>
+[2024-07-13T10:43:13.414+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deploy_flask_app.build_image scheduled__2023-03-25T00:00:00+00:00 [queued]>
+[2024-07-13T10:43:13.415+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-13T10:43:13.435+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): build_image> on 2023-03-25 00:00:00+00:00
+[2024-07-13T10:43:13.447+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=137) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-07-13T10:43:13.451+0000] {standard_task_runner.py:63} INFO - Started process 161 to run task
+[2024-07-13T10:43:13.449+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deploy_flask_app', 'build_image', 'scheduled__2023-03-25T00:00:00+00:00', '--job-id', '63', '--raw', '--subdir', 'DAGS_FOLDER/deploy_flask_app.py', '--cfg-path', '/tmp/tmp3d6rc7b5']
+[2024-07-13T10:43:13.453+0000] {standard_task_runner.py:91} INFO - Job 63: Subtask build_image
+[2024-07-13T10:43:13.541+0000] {task_command.py:426} INFO - Running <TaskInstance: deploy_flask_app.build_image scheduled__2023-03-25T00:00:00+00:00 [running]> on host e9ee640206e7
+[2024-07-13T10:43:13.671+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='deploy_flask_app' AIRFLOW_CTX_TASK_ID='build_image' AIRFLOW_CTX_EXECUTION_DATE='2023-03-25T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-03-25T00:00:00+00:00'
+[2024-07-13T10:43:13.674+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-13T10:43:13.696+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-07-13T10:43:13.699+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'docker build -t my-flask-app .']
+[2024-07-13T10:43:13.720+0000] {subprocess.py:86} INFO - Output:
+[2024-07-13T10:43:13.964+0000] {subprocess.py:93} INFO - DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+[2024-07-13T10:43:13.966+0000] {subprocess.py:93} INFO -             Install the buildx component to build images with BuildKit:
+[2024-07-13T10:43:13.967+0000] {subprocess.py:93} INFO -             https://docs.docker.com/go/buildx/
+[2024-07-13T10:43:13.967+0000] {subprocess.py:93} INFO - 
+[2024-07-13T10:43:13.968+0000] {subprocess.py:93} INFO - unable to prepare context: unable to evaluate symlinks in Dockerfile path: lstat /tmp/***tmp76hcgiud/Dockerfile: no such file or directory
+[2024-07-13T10:43:13.968+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2024-07-13T10:43:13.974+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-13T10:43:14.033+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2024-07-13T10:43:14.053+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=deploy_flask_app, task_id=build_image, run_id=scheduled__2023-03-25T00:00:00+00:00, execution_date=20230325T000000, start_date=20240713T104313, end_date=20240713T104314
+[2024-07-13T10:43:14.093+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 63 for task build_image (Bash command failed. The command returned a non-zero exit code 1.; 161)
+[2024-07-13T10:43:14.118+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-07-13T10:43:14.138+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

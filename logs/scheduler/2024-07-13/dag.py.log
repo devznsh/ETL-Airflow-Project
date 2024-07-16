@@ -1,0 +1,105 @@
+[2024-07-13T10:30:23.511+0000] {processor.py:161} INFO - Started process (PID=2309) to work on /opt/airflow/dags/dag.py
+[2024-07-13T10:30:23.513+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2024-07-13T10:30:23.514+0000] {logging_mixin.py:188} INFO - [2024-07-13T10:30:23.514+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2024-07-13T10:30:23.541+0000] {logging_mixin.py:188} INFO - [2024-07-13T10:30:23.535+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag.py", line 35, in <module>
+    build_image >> run_container >> end
+    ~~~~~~~~~~~~^^~~~~~~~~~~~~~~
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskmixin.py", line 104, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskmixin.py", line 262, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskmixin.py", line 232, in _set_relatives
+    raise AirflowException(
+airflow.exceptions.AirflowException: Tried to create relationships between tasks that don't have DAGs yet. Set the DAG for at least one task and try again: [<Task(BashOperator): build_image>, <Task(BashOperator): run_container>]
+[2024-07-13T10:30:23.542+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dag.py
+[2024-07-13T10:30:23.566+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag.py took 0.061 seconds
+[2024-07-13T10:30:54.038+0000] {processor.py:161} INFO - Started process (PID=2368) to work on /opt/airflow/dags/dag.py
+[2024-07-13T10:30:54.041+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2024-07-13T10:30:54.045+0000] {logging_mixin.py:188} INFO - [2024-07-13T10:30:54.044+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2024-07-13T10:30:54.085+0000] {logging_mixin.py:188} INFO - [2024-07-13T10:30:54.078+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag.py", line 35, in <module>
+    build_image >> run_container >> end
+    ~~~~~~~~~~~~^^~~~~~~~~~~~~~~
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskmixin.py", line 104, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskmixin.py", line 262, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskmixin.py", line 232, in _set_relatives
+    raise AirflowException(
+airflow.exceptions.AirflowException: Tried to create relationships between tasks that don't have DAGs yet. Set the DAG for at least one task and try again: [<Task(BashOperator): build_image>, <Task(BashOperator): run_container>]
+[2024-07-13T10:30:54.088+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dag.py
+[2024-07-13T10:30:54.136+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag.py took 0.112 seconds
+[2024-07-13T10:31:24.713+0000] {processor.py:161} INFO - Started process (PID=2427) to work on /opt/airflow/dags/dag.py
+[2024-07-13T10:31:24.717+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2024-07-13T10:31:24.722+0000] {logging_mixin.py:188} INFO - [2024-07-13T10:31:24.721+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2024-07-13T10:31:24.756+0000] {logging_mixin.py:188} INFO - [2024-07-13T10:31:24.748+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag.py", line 35, in <module>
+    build_image >> run_container >> end
+    ~~~~~~~~~~~~^^~~~~~~~~~~~~~~
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskmixin.py", line 104, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskmixin.py", line 262, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskmixin.py", line 232, in _set_relatives
+    raise AirflowException(
+airflow.exceptions.AirflowException: Tried to create relationships between tasks that don't have DAGs yet. Set the DAG for at least one task and try again: [<Task(BashOperator): build_image>, <Task(BashOperator): run_container>]
+[2024-07-13T10:31:24.757+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dag.py
+[2024-07-13T10:31:24.833+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag.py took 0.133 seconds
+[2024-07-13T10:31:55.171+0000] {processor.py:161} INFO - Started process (PID=2486) to work on /opt/airflow/dags/dag.py
+[2024-07-13T10:31:55.172+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2024-07-13T10:31:55.174+0000] {logging_mixin.py:188} INFO - [2024-07-13T10:31:55.174+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2024-07-13T10:31:55.192+0000] {logging_mixin.py:188} INFO - [2024-07-13T10:31:55.188+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag.py", line 35, in <module>
+    build_image >> run_container >> end
+    ~~~~~~~~~~~~^^~~~~~~~~~~~~~~
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskmixin.py", line 104, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskmixin.py", line 262, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskmixin.py", line 232, in _set_relatives
+    raise AirflowException(
+airflow.exceptions.AirflowException: Tried to create relationships between tasks that don't have DAGs yet. Set the DAG for at least one task and try again: [<Task(BashOperator): build_image>, <Task(BashOperator): run_container>]
+[2024-07-13T10:31:55.193+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dag.py
+[2024-07-13T10:31:55.213+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag.py took 0.047 seconds
+[2024-07-13T10:32:25.605+0000] {processor.py:161} INFO - Started process (PID=2545) to work on /opt/airflow/dags/dag.py
+[2024-07-13T10:32:25.606+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2024-07-13T10:32:25.609+0000] {logging_mixin.py:188} INFO - [2024-07-13T10:32:25.609+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2024-07-13T10:32:25.632+0000] {logging_mixin.py:188} INFO - [2024-07-13T10:32:25.626+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag.py", line 35, in <module>
+    build_image >> run_container >> end
+    ~~~~~~~~~~~~^^~~~~~~~~~~~~~~
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskmixin.py", line 104, in __rshift__
+    self.set_downstream(other)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskmixin.py", line 262, in set_downstream
+    self._set_relatives(task_or_task_list, upstream=False, edge_modifier=edge_modifier)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskmixin.py", line 232, in _set_relatives
+    raise AirflowException(
+airflow.exceptions.AirflowException: Tried to create relationships between tasks that don't have DAGs yet. Set the DAG for at least one task and try again: [<Task(BashOperator): build_image>, <Task(BashOperator): run_container>]
+[2024-07-13T10:32:25.634+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dag.py
+[2024-07-13T10:32:25.663+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag.py took 0.064 seconds

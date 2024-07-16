@@ -1,0 +1,13 @@
+[2024-07-13T10:49:18.253+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-13T10:49:18.325+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: deploy_flask_app.build_image manual__2024-07-13T10:41:11.244060+00:00 [queued]>
+[2024-07-13T10:49:18.342+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: deploy_flask_app.build_image manual__2024-07-13T10:41:11.244060+00:00 [queued]>
+[2024-07-13T10:49:18.343+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2024-07-13T10:49:18.381+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): build_image> on 2024-07-13 10:41:11.244060+00:00
+[2024-07-13T10:49:18.429+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=253) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-07-13T10:49:18.442+0000] {standard_task_runner.py:63} INFO - Started process 290 to run task
+[2024-07-13T10:49:18.475+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'deploy_flask_app', 'build_image', 'manual__2024-07-13T10:41:11.244060+00:00', '--job-id', '65', '--raw', '--subdir', 'DAGS_FOLDER/deploy_flask_app.py', '--cfg-path', '/tmp/tmptrbmcauv']
+[2024-07-13T10:49:18.485+0000] {standard_task_runner.py:91} INFO - Job 65: Subtask build_image
+[2024-07-13T10:49:18.614+0000] {task_command.py:426} INFO - Running <TaskInstance: deploy_flask_app.build_image manual__2024-07-13T10:41:11.244060+00:00 [running]> on host e9ee640206e7
+[2024-07-13T10:49:19.855+0000] {local_task_job_runner.py:240} INFO - Task exited with return code -9
